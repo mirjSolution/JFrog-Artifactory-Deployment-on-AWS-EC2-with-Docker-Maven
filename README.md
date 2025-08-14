@@ -45,13 +45,13 @@ sudo su
 ![docker install](images/dockIns.gif)
 
 ```
-sudo apt update -y
+apt update -y
 ```
 
 > Updates the package lists for Ubuntu, ensuring you have the latest information about available packages.
 
 ```
-sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
+apt install apt-transport-https ca-certificates curl software-properties-common -y
 ```
 
 > Installs required dependencies for Docker installation:
@@ -62,7 +62,7 @@ sudo apt install apt-transport-https ca-certificates curl software-properties-co
 > - `software-properties-common` for managing repositories
 
 ```
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 ```
 
 > Downloads Docker's official GPG key (`curl -fsSL`) and adds it to your system to verify package authenticity.
@@ -97,7 +97,7 @@ chmod 777 /var/run/docker.sock
 ## 📦 Step 2: Install & Run JFrog Artifactory OSS
 
 ```
-sudo usermod -aG docker $USER
+usermod -aG docker $USER
 ```
 
 > Adds your current user to the `docker` group so you can run Docker commands without `sudo`.
