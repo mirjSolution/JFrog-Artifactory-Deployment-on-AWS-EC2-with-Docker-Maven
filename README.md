@@ -96,6 +96,8 @@ chmod 777 /var/run/docker.sock
 
 ## 📦 Step 2: Install & Run JFrog Artifactory OSS
 
+![jfrog install](images/jfrog.gif)
+
 ```
 usermod -aG docker $USER
 ```
