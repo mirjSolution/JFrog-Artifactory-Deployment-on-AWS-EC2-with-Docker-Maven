@@ -20,9 +20,13 @@ In this lab, we will:
 
 ## 🛠️ Prerequisites
 
-- An **AWS account** with permissions to launch EC2 instances
-- **Basic Linux command-line knowledge**
+- An **AWS account** with permissions to launch EC2 instances (t2.medium, 8GB)
+
+![EC2 Image](images/ec2.png)
+
 - **Security group** allowing inbound traffic on ports `22`, `8081`, and `8082`
+
+![Inbound](images/inbound.png)
 
 ---
 
