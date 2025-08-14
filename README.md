@@ -75,7 +75,7 @@ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bi
 
 ```
 apt update -y
-apt-cache policy docker-ce -y
+apt-cache policy docker-ce
 ```
 
 > Updates package lists again and checks available Docker CE versions.
@@ -105,20 +105,20 @@ usermod -aG docker $USER
 > Adds your current user to the `docker` group so you can run Docker commands without `sudo`.
 
 ```
-docker pull releases-docker.jfrog.io/jfrog/artifactory-oss:latest
+docker pull docker.bintray.io/jfrog/artifactory-oss:latest
 ```
 
 > Downloads the latest **JFrog Artifactory OSS** image from JFrog's repository.
 
 ```
 mkdir -p /jfrog/artifactory
-chown -R $USER:$USER /jfrog/artifactory
+chown -R 1030 /jfrog/
 ```
 
 > Creates a directory for Artifactory data and assigns ownership to the Artifactory user ID `1030`.
 
 ```
-docker run --name artifactory -d -p 8081:8081 -p 8082:8082 -v /jfrog/artifactory:/var/opt/jfrog/artifactory releases-docker.jfrog.io/jfrog/artifactory-oss:latest
+docker run --name artifactory -d -p 8081:8081 -p 8082:8082 -v /jfrog/artifactory:/var/opt/jfrog/artifactory docker.bintray.io/jfrog/artifactory-oss:latest
 ```
 
 > Runs the Artifactory container in detached mode (`-d`), mapping host ports to container ports and mounting the data directory.
