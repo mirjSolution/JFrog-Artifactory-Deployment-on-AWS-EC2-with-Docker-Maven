@@ -42,6 +42,8 @@ sudo su
 
 ## 🐟 Step 1: Install Docker
 
+![docker install](images/dockIns.gif)
+
 ```
 sudo apt update -y
 ```
