@@ -28,6 +28,16 @@ In this lab, we will:
 
 ![Inbound](images/inbound.png)
 
+- Connect to your instance AWS Console
+
+```bash
+sudo su
+```
+
+> Change user to root
+
+![root](images/root.png)
+
 ---
 
 ## 🐟 Step 1: Install Docker
